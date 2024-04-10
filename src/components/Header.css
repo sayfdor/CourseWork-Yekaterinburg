@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Ubuntu', sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+}
+
+.Header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed ;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(15px);
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.Header-about, .Header-logo {
+    margin: 1rem;
+    color: #fff;
+}
+
+.Header-about {
+    color: white;
+}
+
+@media (max-width: 1400px) {
+    .Header {
+        font-size: 1rem;
+    }
+}

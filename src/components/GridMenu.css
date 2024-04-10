@@ -1,0 +1,39 @@
+:root {
+
+}
+
+.GridMenu-container {
+    height: fit-content;
+    width: 100%;
+    background-color: #222E44;
+    padding: 10vh 0;
+}
+
+.GridMenu-grid {
+    display: grid;
+    align-content: center;
+    width: fit-content;
+    height: 100%;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(2, 300px);
+    grid-gap: 10vh;
+    margin: 0 auto;
+}
+
+/*1200+*/
+/*980*/
+/*770*/
+
+@media (max-width: 980px) {
+    .GridMenu-grid {
+        grid-template-columns: repeat(1, 300px);
+        grid-template-rows: repeat(4, 300px);
+    }
+}
+
+@media (max-width: 770px) {
+    .GridMenu-grid {
+        grid-template-columns: repeat(1, 14em);
+        grid-template-rows: repeat(4, 14em);
+    }
+}

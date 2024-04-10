@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Ubuntu', sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+}
+
+.Intro-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    min-height: 200px;
+    background: url("/src/img/title-bg.png") no-repeat;
+    background-size: cover;
+}
+
+.Intro-container:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0, 0, 0, .7);
+}
+
+.Intro-title {
+    margin: auto;
+    z-index: 91;
+    white-space: pre-line;
+    text-align: left;
+
+    font-family: "Ubuntu", sans-serif;
+    text-transform: uppercase;;
+    font-size: 5em;
+    font-weight: bold;
+}
+
+@media (max-width: 1400px) {
+    .Intro-container {
+        height: 50vh;
+    }
+    .Intro-title {
+        font-size: 2em;
+    }
+}
