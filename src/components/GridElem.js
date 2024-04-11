@@ -4,6 +4,8 @@ import places_title from '../img/attractions_title.png'
 import incidents_title from '../img/incidents_title.png'
 import districts_title from '../img/districts_title.png'
 
+import {Link} from 'react-router-dom'
+
 let dict = {
     'history' : history_title,
     'places' : places_title,
@@ -12,15 +14,16 @@ let dict = {
 }
 
 function GridElem(props) {
+    let link = `/${props.arg}`;
     return (
-        <a className="GridElem-container" href="#">
+        <Link className="GridElem-container" to={link}>
             <div className="GridElem-title">
                 {props.title}
             </div>
             <img className="GridElem-picture"
-                 src={dict[props.imgsrc]}
+                 src={dict[props.arg]}
                  alt="Error"/>
-        </a>
+        </Link>
     );
 }
 

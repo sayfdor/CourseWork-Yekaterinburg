@@ -1,18 +1,19 @@
 import './App.css';
-import Header from "./Header.js";
-import Intro from "./Intro.js"
-import GridMenu from "./GridMenu.js"
-import Footer from "./Footer";
+import MainPage from "./MainPage";
+
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Places from "./Places";
+
 
 function App() {
-  return (
-    <div className="App">
-        <Header/>
-        <Intro/>
-        <GridMenu/>
-        <Footer/>
-    </div>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route path="/places" exact element={<Places/>}/>
+                <Route path="/" exact element={<MainPage/>}/>
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

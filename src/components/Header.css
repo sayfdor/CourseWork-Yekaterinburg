@@ -26,6 +26,18 @@
     color: white;
 }
 
+.P1 {
+    font-weight: 700;
+}
+
+.P2 {
+    font-weight: 400;
+}
+
+.P3 {
+    font-weight: 200;
+}
+
 @media (max-width: 1400px) {
     .Header {
         font-size: 1rem;

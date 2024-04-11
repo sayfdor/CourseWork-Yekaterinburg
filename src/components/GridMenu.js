@@ -6,10 +6,10 @@ function GridMenu() {
     return (
         <div className="GridMenu-container">
             <div className="GridMenu-grid">
-                <GridElem title="история" imgsrc="history"/>
-                <GridElem title="места" imgsrc="places"/>
-                <GridElem title="инциденты" imgsrc="incidents"/>
-                <GridElem title="районы" imgsrc="districts"/>
+                <GridElem title="история" arg="history"/>
+                <GridElem title="места" arg="places"/>
+                <GridElem title="инциденты" arg="incidents"/>
+                <GridElem title="районы" arg="districts"/>
             </div>
         </div>
     );
