@@ -14,11 +14,10 @@
 
     background: rgba(0, 0, 0, 0.3);
 }
-
 .GridElem-title {
     position: absolute;
 
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
@@ -32,13 +31,28 @@
 }
 
 .GridElem-picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    transition: opacity .15s linear;
+}
+
+.GridElem-picture-overlay {
+    position: absolute;
     width: 100%;
     height: 100%;
     z-index: 9;
+    opacity: 0;
     transition: opacity .15s linear;
 }
 
 .GridElem-container:hover .GridElem-title {
+    opacity: 1;
+}
+
+
+.GridElem-container:hover .GridElem-picture-overlay {
     opacity: 1;
 }
 
@@ -56,7 +70,7 @@
             opacity: 0;
         }
         50% {
-            opacity: 1;;
+            opacity: 1;
         }
         100% {
             opacity: 0;
@@ -65,9 +79,19 @@
 
     .GridElem-title {
         /*cubic-bezier(0, 0, 0, 0.97)*/
-        animation: title_opacity_animation ease-in-out both;
+        animation-name: title_opacity_animation;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
         animation-timeline: view(block);
-        animation-range: 30vh 70vh;
+        animation-range: 30vh 80vh;
+    }
+
+    .GridElem-picture-overlay {
+        animation-name: title_opacity_animation;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+        animation-timeline: view(block);
+        animation-range: 30vh 80vh;
     }
 
     @keyframes picture_opacity_animation {
@@ -84,7 +108,10 @@
 
     .GridElem-picture {
         /*cubic-bezier(0, 0, 0, 0.97)*/
-        animation: picture_opacity_animation ease-in-out both;
+        /*animation: picture_opacity_animation ease-in-out both;*/
+        animation-name: picture_opacity_animation;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
         animation-timeline: view(block);
         animation-range: 30vh 80vh;
     }

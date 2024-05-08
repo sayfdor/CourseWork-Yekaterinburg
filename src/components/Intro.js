@@ -1,24 +1,12 @@
 import './Intro.css'
 
-import mainPageIntroImg from '../img/title-bg.png'
-import placesPageIntroImg from '../img/places_title.png'
+import mainPageIntroImg from '../img/main_intro.png'
 
 function Intro(props) {
 
     let imgDict = {
-        'mainPage': mainPageIntroImg,
-        'placesPage': placesPageIntroImg,
+        'mainPage': mainPageIntroImg
     }
-
-    // let introHeightDict = {
-    //     'bigIntro': {
-    //         height: '100vh'
-    //     },
-    //     'smallIntro': {
-    //         height: '40vh',
-    //         minHeight: '150px'
-    //     }
-    // }
 
     return (
         // style={introHeightDict[props.introType]}

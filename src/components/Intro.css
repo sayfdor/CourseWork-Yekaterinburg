@@ -1,7 +1,6 @@
-@font-face {
-    font-family: 'Ubuntu', sans-serif;
-    src: url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
-}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
 
 .Intro-container {
     position: relative;
@@ -41,7 +40,7 @@
     white-space: pre-line;
     text-align: left;
 
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Cormorant Infant", sans-serif;
     text-transform: uppercase;;
     font-size: 5em;
     font-weight: bold;
@@ -49,9 +48,9 @@
 
 @media (max-width: 1400px) {
     .Intro-container {
-        height: 30vh;
+        height: 50vh;
     }
     .Intro-title {
-        font-size: 2em;
+        font-size: 3em;
     }
 }

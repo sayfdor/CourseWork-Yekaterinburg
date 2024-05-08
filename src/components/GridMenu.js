@@ -2,14 +2,11 @@ import './GridMenu.css'
 import GridElem from "./GridElem.js";
 
 
-function GridMenu() {
+function GridMenu(props) {
     return (
         <div className="GridMenu-container">
             <div className="GridMenu-grid">
-                <GridElem title="история" arg="history"/>
-                <GridElem title="места" arg="places"/>
-                <GridElem title="инциденты" arg="incidents"/>
-                <GridElem title="районы" arg="districts"/>
+                { props.data.map(x => <GridElem title={x[0]} arg={x[1]}/>) }
             </div>
         </div>
     );
